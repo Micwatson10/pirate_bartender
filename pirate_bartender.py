@@ -20,10 +20,6 @@ responses = {
 "strong": [my_input]
 }
 
-
-
-
-
 if my_input == "Yes":
     my_drink.append(random.choice(strong_ingredients))
     
