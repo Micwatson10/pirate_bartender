@@ -22,7 +22,7 @@ def drink_responses():
     
     for flavor in questions: #create a brand new variable in the same line to loop through a dictionary 
         my_input8 = raw_input(questions[flavor]) # How to call a value, calling variable flavor
-        responses[flavor] = my_input8 #watch out for order of variables when declaring 
+        responses[flavor] = my_input8 #watch out for order of variables when declaring, use this syntax to ADD to a dictionary 
     
     return responses #use return to output something from the function
     
