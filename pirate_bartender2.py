@@ -20,11 +20,11 @@ def drink_responses():
     responses = {            #creating a brand new dictionary and assigning it the name 'responses'
     }
     
-    for flavor in questions:
+    for flavor in questions: #create a brand new variable in the same line to loop through a dictionary 
         my_input8 = raw_input(questions[flavor]) # How to call a value, calling variable flavor
-        responses[flavor] = my_input8
+        responses[flavor] = my_input8 #watch out for order of variables when declaring 
     
-    return responses
+    return responses #use return to output something from the function
     
    
 def drink_maker(responses):
@@ -41,6 +41,6 @@ def drink_maker(responses):
        # print my_drink
        
 if __name__ == '__main__':
-   new_drink = drink_responses()  #now new drink is the result of the function
+   new_drink = drink_responses()  #now new drink is the result of the function, MUST use this line/create a variable to capture the output of the first function
    drink_maker(new_drink)
    
