@@ -14,25 +14,17 @@ fruity_ingredients = ["slice of orange", "dash of cassis", "cherry on top"]
 
 
 def drink_responses(): 
-
-    responses = {
+    
+    responses = {            #creating a brand new dictionary and assigning it the name 'responses'
     }
     
-    my_input = raw_input(questions['strong'])
-    my_input2 = raw_input(questions['salty'])
-    my_input3 = raw_input(questions['bitter'])
-    my_input4 = raw_input(questions['sweet'])
-    my_input5 = raw_input(questions['fruity'])
-    
-    responses = {
-        "strong": my_input,
-        "salty":my_input2,
-        "bitter":my_input3,
-        "sweet":my_input4,
-        "fruity":my_input5
-    }
+    for flavor in questions:
+        my_input8 = raw_input(questions[flavor]) # How to call a value, calling variable flavor
+        responses[flavor] = my_input8
     
     return responses
+    
+    
     
 def drink_maker(responses):
     import random
@@ -42,7 +34,5 @@ def drink_maker(responses):
         print my_drink
 
 if __name__ == '__main__':
-   drink_responses()
-   
-if __name__ == '__main__':
-   drink_maker()
+   new_drink = drink_responses()  #now new drink is the result of the function
+   drink_maker(new_drink)
