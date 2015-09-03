@@ -6,11 +6,13 @@ questions = {
         "fruity": "Are ye one for a fruity finish?"
 }
 
-strong_ingredients = ["glug of rum", "slug of whisky", "splash of gin"]
-salty_ingredients = ["olive on a stick", "salt-dusted rim", "rasher of bacon"]
-bitter_ingredients = ["shake of bitters", "splash of tonic", "twist of lemon peel"]
-sweet_ingredients = ["sugar cube", "spoonful of honey", "spash of cola"]
-fruity_ingredients = ["slice of orange", "dash of cassis", "cherry on top"] 
+ingredients = {
+    "strong": ["glug of rum", "slug of whisky", "splash of gin"],
+    "salty": ["olive on a stick", "salt-dusted rim", "rasher of bacon"],
+    "bitter": ["shake of bitters", "splash of tonic", "twist of lemon peel"],
+    "sweet": ["sugar cube", "spoonful of honey", "spash of cola"],
+    "fruity": ["slice of orange", "dash of cassis", "cherry on top"]
+} 
 
 
 def drink_responses(): 
@@ -24,15 +26,21 @@ def drink_responses():
     
     return responses
     
-    
-    
+   
 def drink_maker(responses):
     import random
     my_drink = []
-    if responses['strong'] == "Yes":
-        my_drink.append(random.choice(strong_ingredients))
-        print my_drink
-
+    for the_drink in ingredients:
+        if (responses[the_drink]) == "Yes":
+            #print(the_drink)
+            my_drink.append(random.choice(ingredients[the_drink]))
+    print(my_drink)
+    
+   # if responses['strong'] == "Yes":
+       # my_drink.append(random.choice(ingredients[the_drink])
+       # print my_drink
+       
 if __name__ == '__main__':
    new_drink = drink_responses()  #now new drink is the result of the function
    drink_maker(new_drink)
+   
